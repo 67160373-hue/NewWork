@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OfficeStep รองเท้าสำหรับคนทำงาน</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            👞 OfficeStep
+        </div>
+
+        <nav>
+
+            <a href="#home">หน้าแรก</a>
+
+            <a href="#men">รองเท้าผู้ชาย</a>
+
+            <a href="#women">รองเท้าผู้หญิง</a>
+
+            <a href="#business">Business Casual</a>
+
+            <a href="#contact">ติดต่อ</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO / HOME ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+
+            <h1>
+                รองเท้าที่ออกแบบมาเพื่อคนทำงาน
+            </h1>
+
+            <p>
+                ใส่สบายตลอดวัน
+                เดินเยอะก็ไม่เมื่อย
+                เหมาะกับพนักงานออฟฟิศ
+                ประชุม พบลูกค้า และการใช้งานทุกวัน
+            </p>
+
+            <button onclick="showJourney()">
+                สมัครสมาชิก
+            </button>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=900&auto=format&fit=crop"
+                alt="Office Shoes"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MEN ================= -->
+
+    <section class="products" id="men">
+
+        <h2>
+            รองเท้าผู้ชาย
+        </h2>
+
+        <div class="card-container">
+
+
+            <!-- Product 1 -->
+
+            <div class="card">
+
+                <img
+                    src="data:image/webp;base64,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"
+                    class="product-img"
+                    alt="Executive Black"
+                >
+
+                <h3>
+                    Executive Black
+                </h3>
+
+                <p>
+                    รองเท้าหนังสีดำ<br>
+                    เหมาะกับชุดสูทและชุดทำงาน
+                </p>
+
+                <button onclick="showProduct('Executive Black')">
+                    ดูรายละเอียด
+                </button>
+
+            </div>
+
+
+            <!-- Product 2 -->
+
+            <div class="card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3-to0U9RXyPiqNNI3u6JXxSRR7SHpUL6GjNN77xbrwg&s=10"
+                    class="product-img"
+                    alt="Business Brown"
+                >
+
+                <h3>
+                    Business Brown
+                </h3>
+
+                <p>
+                    รองเท้าหนังสีน้ำตาล<br>
+                    สำหรับ Business Casual
+                </p>
+
+                <button onclick="showProduct('Business Brown')">
+                    ดูรายละเอียด
+                </button>
+
+            </div>
+
+
+            <!-- Product 3 -->
+
+            <div class="card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReXSsRu_EWMfjbpZrFMmCB_-Egkgvra3TgXgiejVPKZQ&s=10"
+                    class="product-img"
+                    alt="Comfort Walk"
+                >
+
+                <h3>
+                    Comfort Walk
+                </h3>
+
+                <p>
+                    รองเท้าผ้าใบเรียบ<br>
+                    เดินสบายตลอดวัน
+                </p>
+
+                <button onclick="showProduct('Comfort Walk')">
+                    ดูรายละเอียด
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WOMEN ================= -->
+
+    <section class="products women-section" id="women">
+
+        <h2>
+            รองเท้าผู้หญิง
+        </h2>
+
+        <div class="card-container">
+
+
+            <!-- Women 1 -->
+
+            <div class="card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-fQnY5gJhP4L8WYWyyS1IxC4KQomG47ZpQgwcWC1zw&s=10"
+                    class="product-img"
+                    alt="Office Lady"
+                >
+
+                <h3>
+                    Office Lady
+                </h3>
+
+                <p>
+                    รองเท้าสำหรับสาวออฟฟิศ<br>
+                    สวยและใส่สบาย
+                </p>
+
+                <button onclick="showProduct('Office Lady')">
+                    ดูรายละเอียด
+                </button>
+
+            </div>
+
+
+            <!-- Women 2 -->
+
+            <div class="card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxIMMp3VOQ85v_uSZAuW-1CEiw9V4C839B7a9kLMrzTw&s=10"
+                    class="product-img"
+                    alt="Elegant Walk"
+                >
+
+                <h3>
+                    Elegant Walk
+                </h3>
+
+                <p>
+                    ดีไซน์เรียบหรู<br>
+                    เหมาะกับการทำงาน
+                </p>
+
+                <button onclick="showProduct('Elegant Walk')">
+                    ดูรายละเอียด
+                </button>
+
+            </div>
+
+
+            <!-- Women 3 -->
+
+            <div class="card">
+
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAaEHtr9u4_PXF5cDU2t5p-q3oTPyz_oewvf447zXX9uPjNhsRn2qwuTZO&s=10"
+                    class="product-img"
+                    alt="Daily Comfort"
+                >
+
+                <h3>
+                    Daily Comfort
+                </h3>
+
+                <p>
+                    รองเท้าสำหรับเดินทั้งวัน<br>
+                    น้ำหนักเบาและสวมใส่สบาย
+                </p>
+
+                <button onclick="showProduct('Daily Comfort')">
+                    ดูรายละเอียด
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BUSINESS CASUAL ================= -->
+
+    <section
+        class="business-section"
+        id="business"
+    >
+
+        <h2>
+            Business Casual
+        </h2>
+
+        <p class="business-description">
+
+            สไตล์รองเท้าที่เหมาะกับการทำงาน
+            สามารถใส่ได้ทั้งในสำนักงาน
+            ประชุม และพบลูกค้า
+
+        </p>
+
+
+        <div class="business-content">
+
+
+            <div class="business-box">
+
+                <div class="business-icon">
+                    👔
+                </div>
+
+                <h3>
+                    Smart & Comfortable
+                </h3>
+
+                <p>
+                    ดีไซน์สุภาพ ดูเป็นมืออาชีพ
+                    พร้อมความสบายสำหรับการใช้งานตลอดวัน
+                </p>
+
+            </div>
+
+
+            <div class="business-box">
+
+                <div class="business-icon">
+                    👞
+                </div>
+
+                <h3>
+                    เหมาะกับทุกโอกาส
+                </h3>
+
+                <p>
+                    สามารถจับคู่กับกางเกงสแลค
+                    ชุดทำงาน หรือเสื้อเชิ้ตได้ง่าย
+                </p>
+
+            </div>
+
+
+            <div class="business-box">
+
+                <div class="business-icon">
+                    ⭐
+                </div>
+
+                <h3>
+                    Professional Look
+                </h3>
+
+                <p>
+                    เพิ่มความมั่นใจให้กับบุคลิกภาพ
+                    ในทุกวันทำงาน
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section
+        class="contact-section"
+        id="contact"
+    >
+
+        <h2>
+            ติดต่อเรา
+        </h2>
+
+        <p>
+            หากมีคำถามเกี่ยวกับสินค้า
+            สามารถติดต่อ OfficeStep ได้
+        </p>
+
+
+        <div class="contact-info">
+
+            <p>
+                📧 Email:
+                officestep@example.com
+            </p>
+
+            <p>
+                📞 โทร:
+                02-123-4567
+            </p>
+
+            <p>
+                📍 ที่อยู่:
+                กรุงเทพมหานคร ประเทศไทย
+            </p>
+
+        </div>
+
+
+        <button onclick="showJourney()">
+            สมัครสมาชิก
+        </button>
+
+    </section>
+
+
+    <!-- ================= REGISTER POPUP ================= -->
+
+    <div
+        class="popup"
+        id="popup"
+    >
+
+        <div class="popup-content">
+
+            <span
+                class="close"
+                onclick="closeJourney()"
+            >
+                ×
+            </span>
+
+
+            <!-- STEP 1 -->
+
+            <div class="step active">
+
+                <h2>
+                    สมัครสมาชิก OfficeStep
+                </h2>
+
+                <p>
+                    สร้างบัญชีเพื่อรับข่าวสารและโปรโมชั่น
+                </p>
+
+
+                <input
+                    type="text"
+                    id="fullname"
+                    placeholder="ชื่อ-นามสกุล"
+                >
+
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                >
+
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="รหัสผ่าน"
+                >
+
+
+                <button onclick="nextStep()">
+                    ถัดไป
+                </button>
+
+            </div>
+
+
+            <!-- STEP 2 -->
+
+            <div class="step">
+
+                <h2>
+                    ข้อมูลเพิ่มเติม
+                </h2>
+
+                <p>
+                    กรุณากรอกข้อมูลเพิ่มเติม
+                </p>
+
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="เบอร์โทรศัพท์"
+                >
+
+
+                <input
+                    type="text"
+                    id="address"
+                    placeholder="ที่อยู่"
+                >
+
+
+                <button onclick="nextStep()">
+                    สมัครสมาชิก
+                </button>
+
+            </div>
+
+
+            <!-- STEP 3 -->
+
+            <div class="step">
+
+                <h2>
+                    🎉 สมัครสมาชิกสำเร็จ
+                </h2>
+
+                <p>
+                    ขอบคุณที่สมัครสมาชิกกับ OfficeStep
+                </p>
+
+                <button onclick="closeJourney()">
+                    ปิด
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PRODUCT POPUP ================= -->
+
+    <div
+        class="popup"
+        id="productPopup"
+    >
+
+        <div class="popup-content">
+
+            <span
+                class="close"
+                onclick="closeProduct()"
+            >
+                ×
+            </span>
+
+            <h2 id="productTitle">
+                รายละเอียดสินค้า
+            </h2>
+
+            <p id="productDescription">
+                รายละเอียดสินค้า
+            </p>
+
+            <button onclick="closeProduct()">
+                ปิด
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
